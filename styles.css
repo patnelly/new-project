@@ -1,164 +1,404 @@
- /* styles.css */
-h1{
-    text-align: center;
-    background-color: #6755ce;
-    color: #0e0303;
-    padding: 30px;
-    margin: auto;
-    /* position: sticky; */
-    /* top: 0px; */
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #9fc0eb;
-    color: rgb(20, 13, 13);
+header{
+    background-color: rgb(20, 66, 25);
+    color: white;
     display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
+    height: 60px;
     align-items: center;
     position: sticky;
-    top: 0px;
-   
-
-}
-header .logo {
-    font-size:100%;
-    font-weight: bolder;
-    background-color: azure;    
+    top: 0;
 }
 
-header nav ul {
+ul,li,a{
     list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-   
-}
-
-header nav ul li {
-    margin: 0 10px;
-   
-}
-
-header nav ul li a {
-    color: rgb(20, 3, 3);
     text-decoration: none;
-} 
-.hero {
+    /* margin-left: auto; */
+    display: flex;
+    color: white;
+    padding: 10px;
+    /* margin: 2%; */
+}
+
+nav, ul{
+    margin-left: auto;
+    /* padding: 10px; */
+    /* margin: 2%; */
+}
+
+button{
+    background-color: rgb(22, 54, 25);
+    border-radius: 20px;
+    padding: 8px 25px;
+    color: white;
+    border: 2px solid rgb(10, 189, 10);
     text-align: center;
-    padding: 50px 20px;
-    background-color: #bcd4df;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;  
+    cursor: pointer; 
 }
 
-.hero .banner-image {
-    height: 200px;
-    background-image: url(1.jpg);
+button:hover{
+    background-color: rgb(42, 116, 51);
+    border-radius: 20px;
+}
+
+.mainbody{
+    display: flex;
+    background-color: rgb(5, 17, 8);
+    color: white;
+}
+.thebody{
+    /* background-color: aqua; */
+    padding: 10px;
+}
+
+.paragraph{
+    /* background-color: blue; */
+    font-family: monospace;
+}
+
+.upperbtn{
+    /* background-color: black; */
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.secondhead{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-size: 40px;
+}
+
+/* .upperbtn .button{
+    background-color: white;
+} */
+
+.startsbtn{
+    background-color: green;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.startsbtn:hover{
+    border: none;
+    border-radius: 0;
+}
+
+.worksbtn{
+    background-color: rgb(5, 17, 8);
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+.worksbtn:hover{
+    border: none;
+    border-radius: 0;
+}
+
+img{
+    border-radius: 12px;
+    padding: 18px;
+    height: 900%;
+    width: 700%;
+}
+
+.lower1{
+    background-color: rgb(8, 48, 8);
+    color: white;
+    display: flex;
+    text-align: center;
+    padding-left: 10px;
+    /* border-radius: 0 12px; */
+}
+.h3, h5{
+    color: green;
+    margin-left: 80px;
+    text-align: center;
+}
+
+.mainlower{
+    display: flex;
+    background-color: rgb(86, 145, 86);
+    /* margin-right: 20px; */
+}
+h2{
+    /* background-color: rgb(176, 192, 181); */
+    text-align: center;
+    margin-top: 20px;
+}
+.learnbtn{
+    background-color: green;
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+    margin: 50px 0px 0px 0px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.learnbtn:hover{
+    border: none;
+    border-radius: 0;
+}
+.one{
+    margin: 10px 0px 0px 0px;
+    margin-left: 40px;
+
+}
+.two{
+    margin: 25px 0px 0px 0px;
+    margin-left: 30px;
+
+}
+.three{
+    margin: 50px 0px 0px 0px;
+    margin-left: 30px;
+
+}
+h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+}
+
+.middledsp{
+    display: flex;
+    background-color: rgb(240, 240, 240);
+}
+
+/* .middle2{
+    display: flex; */
+
+.help{
+    text-align: center;
     margin-bottom: 30px;
-    background-size: cover;
-    background-position: center;
+}
+.middlebtn{
+    background-color: green;
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+    margin: 50px 0px 0px 0px;
+    margin-left: 45%;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+.middlebtn:hover{
+    border-radius: 4px;
 
 }
-
-.hero .search-bar input {
+.middle1{
+    margin-right: 20px;
+}
+.middle2{
+    margin-right: 20px;
+}
+.middle3{
+    margin-right: 20px;
+    /* margin-bottom: 30px; */
+}
+.picture{
+    display: flex;
+    /* height: 200px; */
+}
+.picbtn1{
+    background-color: white;
+    border: 2px solid green;
+    color: black;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.picbtn1:hover{
+    background-color: green;
+    border: 1px solid rgb(208, 214, 208);
+    border-radius: 4px;
+    color: white;
+}
+.picbtn2{
+    background-color: white;
+    border: none;
+    color: rgb(71, 214, 71);
+    font-size: 16px;
+    cursor: pointer;
+}
+.picbtn2:hover{
+    background-color: rgb(9, 94, 9);
+    border: 1px solid rgb(208, 214, 208);
+    border-radius: 4px;
+    color: white;
+   
+}
+.picturebody{
+    text-align: center;
+    margin-top: 300px;
+    margin-left: 20px;
+}
+.theimage img{
+    max-width: 110%;
+    object-fit: cover;
+    height: 700px;
+    width: 500px;
+}
+.results{
+    text-align: center;
+}
+.resultdisp{
+    /* background-color: blue; */
+    display: flex;
+    text-decoration-color: green;
+}
+.result1{
+    margin-left: 50px;
+}
+.result2{
+    margin-left: 50px;
+}
+.result3{
+    margin-left: 50px;
+}.result4{
+    margin-left: 50px;
+}
+.result10{
+    color: rgb(40, 121, 40);
+}
+.h4{
+    font-size: 30px;
+}
+.p{
+    color: black;
+}
+.happing{
+    text-align: center;
+}
+.happingdisp{
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    width: 90vh;
+    height: 90vh;
+    margin: auto;
+   
+}
+.happingdisp img{
+    flex: 1 1 50%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+.happbtn{
+    color: rgb(57, 192, 57);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.happbtn:hover{
+    background-color: white;
+    border: none;
+}
+.happ1, .happ2, .happ3, .happ4{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.managedsp1{
+    display: flex;
+    background-color: green;
+    color: white;
+    height: 320px;
+}
+.managebtn{
+    background-color: black;
+    border-radius: 4px;
+    height: 60px;
+    cursor: pointer;
+    /* text-align: center; */
+    /* align-items: center; */
+    /* padding: 30px 14px; */
+}
+.managebtn:hover{
+    background-color: black;
+    border-radius: 4px;
+    height: 60px;
+}
+.manageright{
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    width: 90vh;
+    height: 90vh;
+    margin: auto;
+}
+.manageright img{
+    flex: 1 1 50%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+.manageleft{
+    margin-left: 30px;
+}
+.managedsp{
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+.subscribebtn{
+    border-radius: 4px;
+    background-color: green;
+    padding: 10px;
+    cursor: pointer;
+}
+.subscribebtn:hover{
+    border-radius: 4px;
+    background-color: green;
+}
+.right2 input{
     padding: 10px;
     width: 300px;
     margin-right: 10px;
 }
-
-.hero .search-bar button {
-    padding: 10px 20px;
+footer{
+    background-color: rgb(10, 29, 16);
+    color: white;
 }
-
-.hero .tagline {
-    font-size: 24px;
-    margin-top: 20px;
-}
-
-main {
-    padding: 20px;
-}
-
-main section {
-    margin-bottom: 40px;
-}
-
-main h2 {
-    margin-bottom: 20px;
-}
-
-.courses, .papers, .category-list {
-    display: flex;
-    justify-content: space-around;
-}
-
-.course, .paper, .category {
-    background-color: #c7cbff;
-    padding: 20px;
-    width: 30%;
+.futer1{
     text-align: center;
-    border: 1px solid #ddd;
+}
+.futer2{
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+}
+.money{
     border-radius: 4px;
+    background-color: green;
+    padding: 10px;
+    cursor: pointer;
+}
+.money:hover{
+    border-radius: 4px;
+    background-color: green;
 }
 
-footer {
-    background-color: #9bcde4;
-    color: rgb(36, 35, 43);
+.one1, .two2, .three3, .four4{
+    margin-left: 190px;
+}
+.last1 {
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    margin-left: 70px;
+    padding: 10px;
+    border: 10px;
+    /* background-color: brown; */
+    justify-content: space-between;
 }
-
-footer div {
-    width: 30%;
-    text-align: center;
-}
-form{
-    input[type=text], input[type=email], input[type=password]
-     {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-    }
-    input[type=submit], input[type=reset] {
-        width: 15%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-    }
-  background-color: #cdd1f0;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    margin-inline: 200px;
-    border-radius: 20px;
-    height: 500px;    
-    width: 50%;
-    display: inline-b
-    box-sizing: border-box;
-    padding: 14px 20px;
-}
-.social-media-icons {
+.futerlast{
     display: flex;
-    gap: 15px;
-    fill: green;
+}
+.last2{
+    margin-left: 100vh;
 }
 
-.social-media-icons a {
-    fill: green;
-    font-size: 1.5em;
-    text-decoration: none;
-}
 
-.social-media-icons a:hover {
-    fill: green;
-}
-img{
-    width: 30px;
-    height:30px;
-}
