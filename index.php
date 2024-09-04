@@ -1,116 +1,93 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "passenger_management";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "SELECT id, name, email, phone, destination FROM passengers";
-$result = $conn->query($sql);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passenger Management</title>
+    <title>Orodha ya Wanafunzi</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
         }
         h2 {
-            text-align: center;
             color: #333;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
         }
         th, td {
-            padding: 10px;
+            padding: 12px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
         }
         th {
             background-color: #f2f2f2;
         }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
         a {
-            color: #007bff;
             text-decoration: none;
-        }
-        a:hover {
-            text-decoration: none;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 0;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
+            color: #3498db;
+            padding: 5px 10px;
+            border: 1px solid #3498db;
             border-radius: 4px;
         }
-        .btn-danger {
-            background-color: #dc3545;
+        a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        .action-buttons a {
+            margin-right: 10px;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Passenger Management</h2>
-        <a href="create.php" class="btn">Add New Passenger</a>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Destination</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                        echo "<tr>
-                                <td>{$row['name']}</td>
-                                <td>{$row['email']}</td>
-                                <td>{$row['phone']}</td>
-                                <td>{$row['destination']}</td>
-                                <td>
-                                    <a href='update.php?id={$row['id']}'>Edit</a> |
-                                    <a href='delete.php?id={$row['id']}' class='btn btn-danger'>Delete</a>
-                                </td>
-                              </tr>";
-                    }
-                } else {
-                    echo "<tr><td colspan='5'>No passengers found</td></tr>";
-                }
-                $conn->close();
-                ?>
-            </tbody>
-        </table>
-    </div>
+    <h2>Orodha ya Wanafunzi Waliosajiliwa</h2>
+    <a href="create.php" style="display: inline-block; margin-bottom: 10px;">Sajili Mwanafunzi Mpya</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Jina Kamili</th>
+                <th>Barua pepe</th>
+                <th>Kozi</th>
+                <th>Tarehe ya Usajili</th>
+                <th>Vitendo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            include 'database.php';
+            $sql = "SELECT * FROM students";
+            $stmt = $conn->query($sql);
+
+            while ($row = $stmt->fetch()) {
+                echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['full_name'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+                echo "<td>" . $row['course'] . "</td>";
+                echo "<td>" . $row['reg_date'] . "</td>";
+                echo "<td class='action-buttons'>";
+                echo "<a href='update.php?id=" . $row['id'] . "'>Badilisha</a>";
+                echo "<a href='delete.php?id=" . $row['id'] . "'>Futa</a>";
+                echo "</td>";
+                echo "</tr>";
+            }
+            ?>
+        </tbody>
+    </table>
 </body>
 </html>

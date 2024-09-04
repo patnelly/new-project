@@ -1,25 +1,16 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "passenger_management";
+include 'database.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    $sql = "DELETE FROM students WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([$id]);
+
+    echo "Mwanafunzi amefutwa kwa mafanikio!";
 }
 
-$id = $_GET['id'];
-$sql = "DELETE FROM passengers WHERE id=$id";
-
-if ($conn->query($sql) === TRUE) {
-    header("Location: index.php");
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
+header("Location: index.php");
+exit;
 ?>
