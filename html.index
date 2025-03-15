@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucy Bakery</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking the CSS -->
+</head>
+<script src="script.js"></script> <!-- Linking the JS file -->
+
+<body>
+    <header>
+        <img src="Bakery folder'LUCY_BAKER.png" alt="Lucy Bakery Industry 2026">
+        <nav>
+            <ul>
+        <a href="showSection('home')">Home</a>
+        <a href="showSection('about')">About Us</a>
+        <a href="showSection('contact')">Contact</a>
+        <a href="showSection('signout')">Sign Out</a>
+       <ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <h1>Welcome to Lucy Bakery</h1>
+        <p>Freshly baked treats made with love. Taste the difference today!</p>
+        <button>Explore Our Menu</button>
+    </section>
+
+    <div class="search-container">
+        <input type="text" placeholder="Search for products...">
+        <button id="searchButton">Search</button>
+    </div>
+
+    <section class="categories">
+        <button>All Products</button>
+        <button>Breads</button>
+        <button>Cakes</button>
+        <button>Pastries</button>
+        <button>Cookies</button>
+    </section>
+
+    <section class="product-section">
+        <div class="product-card">
+            <img src="product1.jpg" alt="Chocolate Cake">
+            <h3>Chocolate Cake</h3>
+            <p>Tshs 37,500/=</p>
+        </div>
+        <div class="product-card">
+            <img src="product2.jpg" alt="French Baguette">
+            <h3>French Baguette</h3>
+            <p>Tshs 12,500/=</p>
+        </div>
+        <div class="product-card">
+            <img src="product3.jpg" alt="Strawberry Pastry">
+            <h3>Strawberry Pastry</h3>
+            <p>Tshs 20,000/=</p>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <div class="testimonial-card">
+                <p>"The best bakery in town! The chocolate cake is absolutely divine."</p>
+                <strong>- Patnelly P.</strong>
+            </div>
+            <div class="testimonial-card">
+                <p>"I love the variety and freshness of all the products. Highly recommended!"</p>
+                <strong>- Huruma K.</strong>
+            </div>
+            <div class="testimonial-card">
+                <p>"Great taste, great service. The pastries are my favorite!"</p>
+                <strong>- Deborah B.</strong>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest updates, offers, and bakery news delivered straight to your inbox.</p>
+        <form>
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://wa.me/255723456577" target="_blank"><i class="fab fa-whatsapp"></i> +255 723456577</a>
+            <a href="https://facebook.com/lucybakery" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/lucybakery" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/lucybakery" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/company/lucybakery" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>Contact: +255 782647382 | Email: info@lucybakery.com</p>
+        <p>&copy; 2025 Lucy Bakery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
